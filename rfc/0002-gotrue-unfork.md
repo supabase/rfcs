@@ -1,6 +1,6 @@
 - Feature Name: `gotrue_unfork`
 - Start Date: 2021-10-07
-- RFC PR: [supabase/rfcs#0000](https://github.com/supabase/rfcs/pull/0000)
+- RFC PR: [supabase/rfcs#0002](https://github.com/supabase/rfcs/pull/0002)
 - Supabase Issue: [supabase/supabase#0000](https://github.com/supabase/supabase/issues/0000)
 
 # Summary
