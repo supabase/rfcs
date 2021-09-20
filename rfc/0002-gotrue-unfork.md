@@ -17,6 +17,18 @@ There are several drawbacks to the current fork:
 - *Divergence*: The core codebase is diverging a lot:
   - Supabase uses Postgres, Netlify uses MySQL
   - Netlify uses some methods for managing admin routes which we have removed. Specifically the require a "user" to be marked as an admin, whereas we have implemented Key Auth instead.
+  - Passwordless-sign-up / sign-in mechanisms (e.g. magiclink & sms otp)
+  - Support for HCaptcha
+  - Support for sign-in with apple, azure, discord, twitch, twitter
+  - Support for phone auth with twilio
+  - Gotrue migrations run on start
+  - Filter query behind /admin/users?filter=<searchterm> uses postgres dialect instead of mysql
+  - Fix email change logic (originally broken upstream)
+  - Removal of DB_NAMESPACE & OPERATOR_TOKEN env vars
+  - Admin users are authenticated via JWT instead of being stored in the users table with is_super_admin=true
+  - Addition of schema migrations to support phone auth & email change features
+  - Support for setting smtp sender name
+  - Support for rate-limiting requests that triggers an email being sent out
 - *Different goals*: our fork is becoming one of our key products, and as such we'd like to refactor it (a lot), to enable new features which aren't going to be included in the Netlify Identity product.
 
 # Drawbacks
