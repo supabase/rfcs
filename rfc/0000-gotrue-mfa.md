@@ -1,6 +1,6 @@
 - Feature Name: `gotrue-mfa`
 - Start Date: 2021-10-17
-- RFC PR: [supabase/rfcs#0000](https://github.com/supabase/rfcs/pull/0000)
+- RFC PR: [supabase/rfcs#0003](https://github.com/supabase/rfcs/pull/3)
 - Supabase Issue: [supabase/supabase#0000](https://github.com/supabase/supabase/issues/0000)
 
 # Summary
