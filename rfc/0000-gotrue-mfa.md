@@ -11,7 +11,7 @@ The Auth Server currently dosen't support MFA - [TOTP](https://datatracker.ietf.
 # Motivation
 [motivation]: #motivation
 
-Why are we doing this? What use cases does it support? What is the expected outcome?
+MFA is very important for security of accounts. Many platforms already support it and some platforms require it as a security measure. It would be a positive improvement to Supabase to have support for people/companies that have that as an internal requirement for a platform. This is also a feature that is offered by limited services so may give Supabase a better standing compared to them.
 
 # Guide-level explanation
 [guide-level-explanation]: #guide-level-explanation
