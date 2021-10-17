@@ -22,7 +22,6 @@ Explain the proposal as if it was already included in the platform and you were 
 - Explaining the feature largely in terms of examples.
 - Explaining how Supabase developers should *think* about the feature, and how it should impact the way they use Supabase. It should explain the impact as concretely as possible.
 
-
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
@@ -56,9 +55,9 @@ Why should we *not* do this?
 # Unresolved questions
 [unresolved-questions]: #unresolved-questions
 
-- What parts of the design do you expect to resolve through the RFC process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
-- What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
+- Would an extra endpoint be added e.g. `/mfa`
+  - How would we identify which user?
+  - How would we manage latency and codes expiring?
 
 # Future possibilities
 [future-possibilities]: #future-possibilities
