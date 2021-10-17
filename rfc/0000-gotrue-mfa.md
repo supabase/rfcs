@@ -42,22 +42,16 @@ Why should we *not* do this?
 # Rationale and alternatives
 [rationale-and-alternatives]: #rationale-and-alternatives
 
-- Why is this design the best in the space of possible designs?
-- What other designs have been considered and what is the rationale for not choosing them?
-- What is the impact of not doing this?
+- Make users implement it themselves
+- Make users use another service
+  - This service may already exist or might need to be build.
 
 # Prior art
 [prior-art]: #prior-art
 
-Discuss prior art, both the good and the bad, in relation to this proposal.
-A few examples of what this can include are:
+- It looks like Auth0 has support for [MFA](https://auth0.com/docs/login/mfa). The Auth0 implementations seams to offer [limited customization](https://auth0.com/docs/login/mfa/customize-mfa-user-pages) only allowing for the supported methods of MFa to be turned on or off.
 
-- Does this feature exist in other products and what experience have their community had?
-- What lessons can we learn from what other communities have done here?
-- Papers: Are there any published papers or great posts that discuss this? If you have some relevant papers to refer to, this can serve as a more detailed theoretical background.
-
-This section is intended to encourage you as an author to think about the lessons from other platforms, provide readers of your RFC with a fuller picture.
-If there is no prior art, that is fine - your ideas are interesting to us whether they are brand new or if it is an adaptation from other platforms.
+- Firebase doesn't have 1st hand support for MFA. Using other google services you can support [OTP via SMS](https://stackoverflow.com/a/52906804/14918759). However, that is an extra cost and requires extra setup as shown [here](https://cloud.google.com/identity-platform/docs/web/mfa).
 
 # Unresolved questions
 [unresolved-questions]: #unresolved-questions
