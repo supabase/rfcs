@@ -16,22 +16,36 @@ MFA is very important for security of accounts. Many platforms already support i
 # Guide-level explanation
 [guide-level-explanation]: #guide-level-explanation
 
-Explain the proposal as if it was already included in the platform and you were teaching it to another Supabase developers. That generally means:
+When you are wanting to enable 2FA you should go into your auth settings and enable 2FA. You should then see more options for 2FA e.g. Enabled methods, Settings for each method, MFA rules, etc. Once you enable a method such as SMS OTPs you can then edit the message that is sent out using the same templates your used too with email templates. You can also set rules for MFA such as all accounts need it but only require when the login is suspicious, all accounts need it and must verify each time or no accounts need it. Once you have everything configured your then read to start using MFA.
 
-- Introducing new named concepts.
-- Explaining the feature largely in terms of examples.
-- Explaining how Supabase developers should *think* about the feature, and how it should impact the way they use Supabase. It should explain the impact as concretely as possible.
+When you now use the `supabase.auth.signIn()` you can recieve either the normal response that your used too or recieve a response telling you MFA is required. If you are required to get MFA you can then use `supabase.auth.mfa()` which takes the token from the `signIn()` response and the 2FA code the user inputed. The `mfa()` method will then either return a positive response (the response your used too from `signIn()`) or a negative response (tbd -  the negative response has a new token to be used or there is another method e.g. `mfaRetry()` that can be used to get a new code upto x time). 
 
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
 
-This is the technical portion of the RFC. Explain the design in sufficient detail that:
+When implementing MFA we need to somehow get an identify from the server e.g. on login instead of returning the tokens we return:
+```json
+{
+    "type": 0 | 1, // If its just a login or needs mfa
+    // ...rest of the data
+}
+```
+For the the MFA type we could return data such as below:
+```json
+{
+    "type" : 1,
+    "mfa_token": "aaa.bbb.ccc"
+}
+```
+That MFA token could then be used to identify the requesting user for the `/mfa` endpoint. The MFA token could include data such as enabled/requested MFA type, User ID and could be set to expire at a relevant time based on the MFA method(s). The `/mfa` ednpoint could then accept the data in just JSON e.g.
+```json
+{
+    "mfa_token": "aaa.bbb.ccc",
+    "code": "123456" 
+}
+```
+Or it could use a mix of headers and json e.g. X-MFA-Token with the token and then just the code in the JSON body. Once MFA is completed there are a couple methods of then being used. We could then return a token that can be used with the login endpoint or it could just return the login data.
 
-- Its interaction with other features is clear.
-- It is reasonably clear how the feature would be implemented.
-- Corner cases are dissected by example.
-
-The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
 
 # Drawbacks
 [drawbacks]: #drawbacks
