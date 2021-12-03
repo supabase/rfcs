@@ -7,7 +7,9 @@
 
 Outlines our design of Functions with containers.
 
-Watch a demonstration [here](https://github.com/supabase/rfcs/pull/5).
+Watch a demonstration here:
+
+https://user-images.githubusercontent.com/10214025/144591756-f508efbf-cc21-4208-84f5-5a3ca9e7d6e6.mp4
 
 # Motivation
 [motivation]: #motivation
