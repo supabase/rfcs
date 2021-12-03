@@ -11,6 +11,9 @@ Watch a demonstration here:
 
 https://user-images.githubusercontent.com/10214025/144591756-f508efbf-cc21-4208-84f5-5a3ca9e7d6e6.mp4
 
+
+This is an internal video, so when we say "they", we mean "you" :)
+
 # Motivation
 [motivation]: #motivation
 
