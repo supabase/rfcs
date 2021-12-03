@@ -90,7 +90,7 @@ PostgreSQL already supports Functions, which Supabase developers can call using 
 
 ### Prior Art
 
-[Postgres Functions](https://supabase.com/docs/guides/database/functions), [SupaScript](https://github.com/burggraf/SupaScript), [postgres-deno](https://github.com/supabase/postgres-deno/issues/1)
+[Postgres Functions](https://supabase.com/docs/guides/database/functions), [SupaScript](https://github.com/burggraf/SupaScript) - [Demo](https://www.youtube.com/watch?v=ywdRAjPhTbg&t=3s), [postgres-deno](https://github.com/supabase/postgres-deno/issues/1)
 
 
 ### Pros 
