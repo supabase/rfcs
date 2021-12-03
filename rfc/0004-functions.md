@@ -16,6 +16,8 @@ While we could copy the design of Firebase Functions exactly, we also have an op
 
 This RFC will function more as a Design Document - exploring various potential options, and the pros and cons of each.
 
+If you have a use-case for Functions that you can share with the team, please use [this Discussion](https://github.com/supabase/supabase/discussions/4269). It will be incredibly helpful in this Design Doc.
+
 # Roadmap / Blockers
 
 For all of these options, there are a few blockers that we need to clear before proceeding.
