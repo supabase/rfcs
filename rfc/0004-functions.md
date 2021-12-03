@@ -66,7 +66,7 @@ The ability to run very isolated pieces of code on th edge. This is the most com
 
 # Option 3: Containers
 
-Run functions inside full Docker containers. We are leaning heavily towards this option, and have a separate RFC here with the details of how we would implement this.
+Run functions inside full Docker containers. We are leaning heavily towards this option, and have a separate RFC [here with the details](https://github.com/supabase/rfcs/blob/rfc/functions_with_containers/rfc/0005-functions_with_containers.md) of how we would implement this.
 
 ## Prior Art
 
